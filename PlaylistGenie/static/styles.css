@@ -1,0 +1,129 @@
+
+
+
+.body{
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(125, 119, 119), rgb(47, 108, 147))
+}
+
+.container{
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60%;
+}
+
+h1{
+    margin-bottom: 20px;
+    color: white;
+}
+form{
+    display: inline-block;
+    text-align: center;
+
+}
+
+
+label{
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+    font-weight: bold;
+
+}
+
+
+
+.button{
+    top: 50%;
+    background-color: #1ED760;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;  /* look into what this specific func does */ 
+    display:inline-block;
+    font-size: 16px; 
+    font-weight: bold;
+
+    margin: 4px 2x;
+    cursor: pointer;
+
+}
+
+
+
+.input_box{
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+
+.error_msg{
+    color: red;
+    font-size: 14;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px;
+
+}
+
+
+/* 
+Items below are used for /recommendations page 
+*/ 
+
+h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.recommendations_table {
+    margin: 0 auto;
+    border-radius: 10px;
+
+    width: 90%;
+    text-align: center;
+    background-color: rgb(50, 50, 50);
+}
+
+.recommendations_table th,
+.recommendations_table td {
+    padding: 10px;  
+    border-radius: 10px;
+
+    font-size: 17px;
+    color: white;
+}
+
+.recommendations_table th {
+    background-color: #1ED760;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+
+}
+
+.button_container {
+    margin-top: 20px;
+    text-align: center;
+}

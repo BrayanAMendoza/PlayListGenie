@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class = "body">
+
+    <div class = "container">
+        <h1>Music Recommendation System</h1> 
+        <form method="POST" action="/recommendations">
+
+            <label for="playlist_id">Playlist ID:</label>
+            <input type="text" id="playlist_id" name="playlist_id" class = "input_box">
+        
+            <label for="song_name">Song Name:</label>
+            <input type="text" id="song_name" name="song_name" class = "input_box">
+            <!--
+                Adding for updated backend that requires user to enter artist name 
+            -->
+            <label for="artist_name">Artist Name:</label>
+            <input type="text" id="artist_name" name="artist_name" class = "input_box">
+        
+            <button type="submit"  class = "button">Get Recommendations</button>
+        </form>
+
+        <!-- Display message if validation fails -->
+        {% if message %}
+            <p class = "error_msg">{{ message }}</p>
+        {% endif %}
+
+    </div>
+
+
+    </table>
+</body>
+</html>

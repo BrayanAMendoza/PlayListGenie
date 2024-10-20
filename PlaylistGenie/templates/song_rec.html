@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body class="body">
+
+    <div class="container">
+        <h2>Recommendations from Your Playlist</h2>
+        <table class="recommendations_table">
+            <tr>
+                <th>Track Name</th>
+                <th>Artists</th>
+                <th>Album Name</th>
+                <th>Release Date</th>
+                <th>Popularity Score</th>
+            </tr>
+            {% for recommendation in recommendations[0] %}
+            <tr>
+                <td>{{ recommendation['Track Name'] }}</td>
+                <td>{{ recommendation['Artists'] }}</td>
+                <td>{{ recommendation['Album Name'] }}</td>
+                <td>{{ recommendation['Release Date'] }}</td>
+                <td>{{ recommendation['Popularity'] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <h2>Recommendations from Spotify Library</h2>
+        <table class="recommendations_table">
+            <tr>
+                <th>Track Name</th>
+                <th>Artists</th>
+                <th>Album Name</th>
+                <th>Release Date</th>
+                <th>Popularity Score</th>
+            </tr>
+            {% for recommendation in recommendations[1] %}
+            <tr>
+                <td>{{ recommendation['Track Name'] }}</td>
+                <td>{{ recommendation['Artists'] }}</td>
+                <td>{{ recommendation['Album Name'] }}</td>
+                <td>{{ recommendation['Release Date'] }}</td>
+                <td>{{ recommendation['Popularity'] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <div class="button_container">
+            <form action="{{ url_for('index') }}">
+                <button type="submit" class="button">Try a different playlist</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
